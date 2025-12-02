@@ -31,6 +31,8 @@ JSON Relational Duality View의 가장 좋은 점은 JSON 데이터의 단점일
 
 본 데모는 M1 Mac 환경에서 테스트하였습니다. 
 
+그러나 도커가 지원되는 x86 환경에서도 실행가능합니다. 
+
 ### DB23ai 도커버전 배포
 
 ```jsx
