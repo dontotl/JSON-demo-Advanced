@@ -525,24 +525,6 @@ DB에 jsondual 유저로 접속하여 다음 SQL을 실행하여 ORDS서비스�
 execute ords.ENABLE_SCHEMA;
 ```
 
-docker exec -it db23ai bash
-
-sqlplus sys/Welcome_12345@localhost:1521/FREEPDB1 as sysdba
-create user jsondual identified by jsondual default tablespace users quota unlimited on users;
-grant connect, resource to jsondual;
-
-conn jsondual/jsondual@localhost:1521/FREEPDB1
-
-execute ords.ENABLE_SCHEMA;
-
-```coq
-begin
-	ords.enable_schema(
-			p_enabled=>TRUE,
-			p_schema=>'JSONDUAL',
-			p_url_mapping_type=>'BASE_PATH',
-			p_url_mapping_pattern=>'jd',
-```
 
 ## JSON Duality View 데모
 
