@@ -1,8 +1,9 @@
 # [DB] Oracle DB 23ai JSON Relational Duality HoL v2.0
 
+
 Apr, 2025 
 
-Oracle Korea, Junghoon.yoo
+
 
 ## OVERVIEW
 
