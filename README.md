@@ -1,9 +1,6 @@
 # [DB] Oracle DB 23ai JSON Relational Duality HoL v2.0
 
-
-Apr, 2025 
-
-
+<br><br>
 
 ## OVERVIEW
 
@@ -25,13 +22,17 @@ JSON Relational Duality View의 가장 좋은 점은 JSON 데이터의 단점일
 
 실습을 통해 JSON Relational Duality View을 테스트해 보고, JSON 기반 어플리케이션에서의 활용이나  rest API 의 백엔드 저장소로서의 활용,  noSQL 페인포인트 해결의 아이디어를 얻는 시간이 되기를 바랍니다. 
 
-## **실습 환경 구성**
+<br><br>
+
+## 1. 실습 환경 구성 
 
 간단한 실습 환경 구현을 위해 db23ai free docker 버전을 사용하겠습니다. 도커환경을 윈도우나 Mac에서 사전구성한 후 진행합니다.
 
 본 데모는 M1 Mac 환경에서 테스트하였습니다. 
 
 그러나 도커가 지원되는 x86 환경에서도 실행가능합니다. 
+
+<br><br>
 
 ### DB23ai 도커버전 배포
 
@@ -129,6 +130,8 @@ M1 계열은 ARM기반 아키텍처라서, Arm 기반 Oracle DB23ai 를 배포�
 
 x86 계열 테스트 환경은 x86_64 기반 Oracle DB23ai 를 배포하면 되겠습니다. 
  "DATABASE IS READY TO USE!" 문구가 로그에 뜨면 DB접속에 접속하고 사용 가능한 상태가 됩니다. 
+
+<br><br>
 
 ### ORDS 설치 및 구성
 
@@ -317,6 +320,8 @@ bash-4.4$ ords config set mongo.enabled true
 
 bash-4.4$ ords serve
 ```
+
+<br><br>
 
 ### 샘플 스키마 구성
 
@@ -525,8 +530,9 @@ DB에 jsondual 유저로 접속하여 다음 SQL을 실행하여 ORDS서비스�
 execute ords.ENABLE_SCHEMA;
 ```
 
+<br><br>
 
-## JSON Duality View 데모
+## 2. JSON Duality View 실습
 
 이제 웹브라우저에서 ords랜딩 페이지에 접속해 봅니다
 
@@ -604,6 +610,8 @@ AUTOREST 를 선택합니다.
 driver_dv의 데이터를 get한 결과를 볼 수 있고, pretty print 적용을 활성화하면 정돈된 JSON 데이터를 볼수 있습니다. 
 
 ![image.png](%5BDB%5D%20Oracle%20DB%2023ai%20JSON%20Relational%20Duality%20HoL%20v2/image%2011.png)
+
+<br><br>
 
 ### MongoDB API 호환 실습 데모
 
@@ -873,6 +881,8 @@ JSON Duality View를 확인하면 다음과 같습니다.
 
 ![image.png](%5BDB%5D%20Oracle%20DB%2023ai%20JSON%20Relational%20Duality%20HoL%20v2/image%2016.png)
 
+<br><br>
+
 ### MongoDB Compass 연계
 
 MongoDB Compass로도 오라클DB JSON DV접속해 보도록 하겠습니다. 
@@ -909,7 +919,9 @@ Advanced Connection Options > TLS/SSL 에서 tlsAllowInvalidCertificates를 활�
 
 ![image.png](%5BDB%5D%20Oracle%20DB%2023ai%20JSON%20Relational%20Duality%20HoL%20v2/image%2021.png)
 
-### 별첨
+<br><br>
+
+## 별첨
 
 1. **Autorest 활성화 SQL Script** 
 
@@ -950,7 +962,7 @@ end;
 /
 ```
 
-1. **Oracle Live SQL for JSON Duality View**
+2. **Oracle Live SQL for JSON Duality View**
 
 JSON Duality View를 간단하게 체험할 수 있는 LiveSQL 주소입니다.
 
@@ -958,7 +970,7 @@ JSON Duality View를 간단하게 체험할 수 있는 LiveSQL 주소입니다.
 
 https://livesql.oracle.com/next/worksheet?tutorial=json-duality-views-quick-start-D3wdHG&share_key=jCX1875rL3
 
-1. **JSON Duality View Builder - SQL*Developer for VS Code**
+3. **JSON Duality View Builder - SQL*Developer for VS Code**
 
 SQL Developer for VS code 에서 Duality View Builder 를 제공합니다. 
 
@@ -1005,6 +1017,8 @@ driver와 team 데이터를 모두 가지는 JSON DV 생성스크립트가 작�
 TEST_DV라는 새로운 JSON DV 를 GUI기반으로 간단하게 만들어 보았습니다. 
 
 ![image.png](%5BDB%5D%20Oracle%20DB%2023ai%20JSON%20Relational%20Duality%20HoL%20v2/image%2032.png)
+
+<br><br>
 
 ## 맺음말
 
