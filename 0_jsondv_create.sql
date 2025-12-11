@@ -131,7 +131,8 @@ SELECT JSON {'_id'  IS t.team_id,
                     FROM driver d WITH INSERT UPDATE
                     WHERE d.team_id = t.team_id ]}
     FROM team t WITH INSERT UPDATE DELETE;
-    
+
+--데이터 적재
 INSERT INTO team_dv VALUES ('{"_id" : 301,
                         "name"   : "Red Bull",
                         "points" : 0,
@@ -193,6 +194,15 @@ SELECT * FROM driver_race_map;
 SELECT * FROM team_dv;
 SELECT * FROM team;
 
+-- Update 
+UPDATE race_dv dv
+  SET DATA = json_transform(DATA, SET '$.name' = 'Blue Air Bahrain Grand Prix')
+    WHERE dv.DATA.name LIKE 'Bahr%';
+ 
+COMMIT;
+
+SELECT json_serialize(DATA PRETTY)
+  FROM race_dv WHERE json_value(DATA, '$.name') LIKE 'Bahr%';
 
 
 
