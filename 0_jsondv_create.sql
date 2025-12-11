@@ -181,3 +181,20 @@ INSERT INTO race_dv VALUES ('{"_id" : 203,
                             "date"   : "2022-04-09T00:00:00",
                             "podium" : {}}');
 COMMIT;
+
+--조회 
+SELECT * FROM race_dv;
+SELECT * FROM race;
+
+SELECT * FROM driver_dv;
+SELECT * FROM driver;
+SELECT * FROM driver_race_map;
+
+SELECT * FROM team_dv;
+SELECT * FROM team;
+
+
+
+
+
+
